@@ -58,7 +58,7 @@ public class FriendCount {
 		int myFriendCount = friendCount.size();
 		float averageFriendsFriends = ((float)sum)/(float)friendCount.size();
 		
-		System.out.println("Total Number Friends who allow you to access their friend count"+friendCount.size());
+		System.out.println("Total Number Friends who allow you to access their friend count "+friendCount.size());
 		System.out.println("Average "+averageFriendsFriends);
 		
 		if(myFriendCount<averageFriendsFriends){
