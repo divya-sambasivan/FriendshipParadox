@@ -33,8 +33,6 @@ public class FriendCount {
 			 y=(Long)((JavascriptExecutor) driver).executeScript("return window.pageYOffset");
 		     long y2 = y.longValue();
 		     if(y1-y2 ==0){
-		    	 System.out.println(y1);
-		    	 System.out.println(y2);
 		    	 break;
 		     }
 			
@@ -42,7 +40,7 @@ public class FriendCount {
 		
 		ArrayList<Integer> friendCount = new ArrayList<Integer>();
 		List<WebElement> allNames = driver.findElements(By.xpath("//a[@class='uiLinkSubtle']"));
-		System.out.println(allNames.size());
+		System.out.println("Total Number of Friends "+allNames.size());
 		for(int i=0;i<allNames.size();i++){
 			String friendPhrase = allNames.get(i).getText();
 			if(friendPhrase.contains("friends") && !friendPhrase.contains("mutual")){
@@ -57,8 +55,18 @@ public class FriendCount {
 			sum+=(Integer)i.next();
 		}
 		
-		System.out.println("Total Friends "+friendCount.size());
-		System.out.println("Average "+((float)sum)/(float)friendCount.size());
+		int myFriendCount = friendCount.size();
+		float averageFriendsFriends = ((float)sum)/(float)friendCount.size();
+		
+		System.out.println("Total Number Friends who allow you to access their friend count"+friendCount.size());
+		System.out.println("Average "+averageFriendsFriends);
+		
+		if(myFriendCount<averageFriendsFriends){
+			System.out.println("Yup! You are a subject(ahem victim) of the friendship paradox");
+		}
+		else{
+			System.out.println("You popular person, you!");
+		}
 	}
 }
 
