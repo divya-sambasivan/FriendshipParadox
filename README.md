@@ -9,7 +9,7 @@ This sample code computes the average number of friends that your facebook frien
 It also displays the number of friends you have. 
 
 note: this may be considerably lower than your facebook friends as this code ignores
-all your friends who have set their privacy settings so that all their friends are not visible to them
+all your friends who have set their privacy settings so that all their friends are not visible to you
 
 note 2: Since this code has no way of finding the count of your friends who have hidden this information in their profiles, your results
 may not be accurate.
